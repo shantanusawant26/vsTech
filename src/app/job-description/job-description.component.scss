@@ -1,0 +1,57 @@
+
+
+
+.job-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    // background-color: rgb(214, 215, 216);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #job-description-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .info-line {
+    margin-top: 10px;
+  }
+  
+  .info-line .label {
+    font-weight: bold;
+  }
+  
+  .info-line p, .info-line ul {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .info-line ul {
+    list-style-type: disc;
+    padding-left: 70px;
+  }
+  
+  .info-line li {
+    margin-bottom: 5px;
+  }
+  
+  #apply-now-btn {
+    width: 120px;
+    height: 40px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+  }
+  

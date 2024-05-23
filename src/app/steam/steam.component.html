@@ -1,0 +1,37 @@
+
+<div class="container">
+    <h1>Welcome to Our STEAM Program!</h1>
+    <p class="headline">Our innovative approach integrates the arts into the traditional STEM curriculum to foster creativity alongside technical skills. We offer a variety of offline camps and workshops designed to engage students from 1st grade through to engineering college level in the latest technological advancements. Our hands-on learning experiences aim to inspire and prepare the next generation of innovators.</p>
+  
+    <div *ngFor="let level of levels">
+      <h2>{{ level.name }}</h2>
+      <div class="container-1" *ngFor="let program of level.programs">
+        <h3>{{ program.title }}</h3>
+        <p>{{ program.description }}</p>
+      </div>
+    </div>
+  
+    <h2 style="color: black;" >Why Choose Our STEAM Program?</h2>
+    <div class="container-2" >
+      <ul>
+        <li>Interactive Learning: </li> 
+          <li>We believe in learning by doing. Our workshops and camps are designed to be highly interactive, encouraging students to engage directly with the material.</li>
+        <li>Expert Instructors: Our programs are led by industry experts and experienced educators who are passionate about teaching and mentoring the next generation.</li>
+        <li>State-of-the-Art Equipment: We provide access to the latest tools and technologies, including advanced electronics kits, microcontrollers, and software used in professional settings.</li>
+        <li>Creativity and Innovation: By incorporating the arts into our STEM curriculum, we encourage students to think creatively and approach problems from multiple perspectives.</li>
+        <li>Career Preparation: Our programs are designed to give students a head start in their academic and professional careers by equipping them with the skills needed in today's tech-driven world.</li>
+      </ul>
+    </div>
+    
+  
+    <h2>Upcoming Technologies Covered</h2>
+    <ul class="container-2">
+      <li *ngFor="let technology of upcomingTechnologies">{{ technology }}</li>
+    </ul>
+  
+    <h2>How to Enroll</h2>
+    <p style="text-align: center;">{{ contactInfo }}</p>
+  
+    <p style="text-align: center;">Join us in exploring the exciting world of STEAM and prepare to make your mark on the future!</p>
+  </div>
+  

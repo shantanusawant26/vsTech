@@ -1,0 +1,92 @@
+
+<app-main-header></app-main-header>
+<app-map></app-map>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+ 
+ <div class="container-wrapper"> 
+  <div class="contact-panel__info " >
+    <div class="contact-block">
+      <h5 class="contact-block__title">Our Location</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li>H2F5+GV8 &amp; Kesnand, Pune, Maharashtra 411014</li>
+      </ul>
+    </div>
+    <div class="contact-block">
+      <h5 class="contact-block__title">Quick Contact</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li><a href="mailto:info@phntechnology.com" class="mail_href"></a>Email: hr@vstechhorizon.com</li>
+        <li><a href="mailto:info@phntechnology.com" class="mail_href"></a>Support: hr@vstechhorizon123.com</li>
+      </ul>
+    </div>
+    <div class="contact-block">
+      <h5 class="contact-block__title">Opening Hours</h5>
+      <ul class="contact-block__list list-unstyled">
+        <li>Monday - Friday</li>
+        <li>10:00 AM - 07:00 PM</li>
+      </ul>
+    </div>
+    <p class="color-white mb-20">If you have any questions or need help, feel free to contact with our team.</p>
+    <a href="tel:1800 209 2288" class="phone-number"></a>
+  </div>
+
+  <div class="container">
+    <h1>Send Query</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-sm-6">
+          <input id="name" formControlName="name" placeholder="Name">
+          <div *ngIf="contactForm.get('name')?.errors?.['required'] && contactForm.get('name')?.touched" class="error-message">
+            Name is required
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <input id="email" formControlName="email" placeholder="Email">
+          <div *ngIf="contactForm.get('email')?.errors?.['required'] && contactForm.get('email')?.touched" class="error-message">
+            Email is required
+          </div>
+          <div *ngIf="contactForm.get('email')?.errors?.['email'] && contactForm.get('email')?.touched" class="error-message">
+            Please enter a valid email address
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-6">
+          <input id="phone" formControlName="phone" placeholder="Phone-number">
+          <div *ngIf="contactForm.get('phone')?.errors?.['required'] && contactForm.get('phone')?.touched" class="error-message">
+            Phone number is required
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <input id="sub" formControlName="sub" placeholder="Subject">
+          <div *ngIf="contactForm.get('sub')?.errors?.['required'] && contactForm.get('sub')?.touched" class="error-message">
+            Subject is required
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        <textarea id="message" formControlName="message" placeholder="Message" rows="5"></textarea>
+        <div *ngIf="contactForm.get('message')?.errors?.['required'] && contactForm.get('message')?.touched" class="error-message">
+          Message is required
+        </div>
+      </div>
+      <div class="button-container">
+        <button type="submit"[disabled]="!contactForm.valid">Submit</button>
+      </div>
+      <!-- <div *ngIf="!contactForm.valid && contactForm.touched" class="error-message">
+        All fields are mandatory.
+      </div> -->
+    </form>
+  </div>
+</div> 
+
+
+
+<app-footer></app-footer>
+
+
+
+

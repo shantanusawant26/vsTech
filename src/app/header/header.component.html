@@ -1,0 +1,301 @@
+<div class="main">
+
+    <!-- hearder section -->
+    <div>
+        <app-main-header></app-main-header>
+    </div>
+    <!-- Popup Box -->
+
+
+    <div class="popup" *ngIf="showPopup">
+        
+            <h2>Coming soon</h2>
+            <button class="send-btn" (click)="hidePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+          
+      </div>
+    <div class="image-contai">
+        <div class="images-wrapp" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+            <img *ngFor="let img of Images" [src]="img" alt="">
+        </div>
+        <button class="scroll-btn left-btn" (click)="scrollLeft()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                <path fill="none" d="M0 0h24v24H0z" />
+            </svg>
+        </button>
+        <button class="scroll-btn right-btn" (click)="scrollRight()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                <path fill="none" d="M0 0h24v24H0z" />
+            </svg>
+        </button>
+    </div>
+
+
+
+    <!-- Carousel Section -->
+    <div id="steam">
+        <app-carousel></app-carousel>
+    </div>
+
+
+    <!-- About Us -->
+
+    <div class="box-1">
+        <div class="image-1">
+            <img src="../../assets/img/5.jpeg" alt="">
+        </div>
+        <div class="image-2">
+            <img src="../../assets/img/1.jpeg" alt="">
+        </div>
+        <div class="image-3">
+            <img src="../../assets/img/4.jpeg" alt="">
+        </div>
+        <div class="image-4">
+            <img src="../../assets/img/7.jpeg" alt="">
+        </div>
+        <div class="image-5">
+            <img src="../../assets/img/3.jpeg" alt="">
+        </div>
+        <div class="image-6">
+            <img src="../../assets/img/2.jpeg" alt="">
+        </div>
+        <div class="horizontal-left-rectangle"></div>
+
+        <div class="vertical-left-rectangle"></div>
+
+        <div class="horizontal-right-rectangle"></div>
+        <div class="vertical-right-rectangle"></div>
+        <h1 >Welcome To <br><br>VS Tech Horizon</h1>
+        <div class="in-con">
+            <h3>About Us</h3>
+            <p>For every student,every classroom, Real results. We're a non-profit
+                with the mission to provide a free, world-class education for anyone, anywhere.
+            </p>
+        </div>
+       
+        <button class="btn-1" [routerLink]="'/form'">Contact Us</button>
+    </div>
+
+
+    <!-- Courses Section -->
+
+    <div class="box-2" id="courses">
+        <h2>Courses</h2>
+        
+        <div class="carousel">
+            
+            <div class="images-wrapper">
+                
+                <div class="image-wrapper" *ngFor="let img of images; let i = index"
+                    [style.transform]="'translateX(' + (currIndex * -100) + '%)'">
+                    
+                    <a [routerLink]="'/courses'"><img [src]="img" alt=""></a>
+                </div>
+       
+            </div>
+       
+
+            <button class="btn prev" (click)="previousImage()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    <path fill="none" d="M0 0h24v24H0z" />
+                </svg>
+            </button>
+
+            <button class="btn next" (click)="nextImage()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    <path fill="none" d="M0 0h24v24H0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Image -->
+    <section>
+        <img src="../../assets/img/cloud.jpg" alt="">
+    </section>
+
+
+    <!-- Services Section -->
+    <h2 class="h2" id="services">Services</h2>
+    <div class="box-carousel">
+
+
+        <div class="box-wrapper">
+            <div class="box">
+                <h1 class="h1" >Online Services</h1>
+                <div class="box-content">
+                    <p>In today's fast-paced world, online services have become an integral part of our daily lives,
+                        revolutionizing the way we interact, transact, and consume. </p>
+                        <a (click)="scrollToserviceSection('onlineservices')" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h1 class="h1">Live Classes And Webinars</h1>
+                <div class="box-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, vel.</p>
+                    <a (click)="scrollToserviceSection('liveclasses')"  class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h1 class="h1">Tutoring Services</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('tutorialservice')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Test Preparation Program</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('testprepration')" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Educational Services</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('educationservice')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Customized Learning Plans</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('customizedlearning')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Learning Management System</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('learningmanagment')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Student Support Services</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('studentsupport')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Progress Tracking and Reporting</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('processtracking')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Community Engagement</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('communityengagement')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Corporate Training and Professional Development</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('corporatetraining')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Partnership and Accreditation</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('Partnershipsandacc')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Diversity and Inclusion Initiatives</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('diversityandinclusion')"  class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Success Stories and Testimonials</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('successstories')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">FAQs and Support Documentation</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('faqs')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Summer Camps and Workshops</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('summercamps')"   class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="h1">Project Kits and Supplies</h1>
+                <div class="box-content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia?</p>
+                    <a (click)="scrollToserviceSection('projectkitandsupp')"   class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Information -->
+    <div class="info">
+        <h2>Need a Little more <br> to know?</h2>
+        <button class="btn-1" [routerLink]="'/form'">Contact Us</button>
+    </div>
+    <div>
+        <h2 class="Courses">What Coustomer Says</h2>
+    </div>
+
+    <!-- Feedback -->
+    <div class="box-carousel-1">
+        <div class="box-wrapper-1" #boxWrapper>
+            <div class="boxx" *ngFor="let item of items">
+                <h3 class="h3">superb work!</h3>
+                <div class="box-content-1">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, odit?.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-container">
+            <div class="arrow left-arrow" (click)="previousFeed()">
+                &larr;
+            </div>
+            <div class="arrow right-arrow" (click)="nextFeed()">
+                &rarr;
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+        </svg>
+    </div>
+    <div>
+        
+    </div>
+
+</div>
+<app-footer></app-footer>

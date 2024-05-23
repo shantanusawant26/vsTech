@@ -1,0 +1,142 @@
+<app-main-header></app-main-header>
+
+<br>
+<h1 class="page-heading">Courses</h1>
+
+<p class="headline" >Tutorials provides in-depth exploration of subjects preparing students for higher education and competitive exams.</p>
+
+<div class="button-container">
+    <!-- <button class="button-container button" (click)="onButtonClick('button1')">5th to 10th</button> -->
+    <button type="button" class="button-container button" (click)="ButtonClick0()" style="cursor: pointer;">5th-10th</button>
+    <button type="button" class="button-container button" (click)="ButtonClick1()" style="cursor: pointer;">11th-12th</button>
+    <!-- <button type="button" class="button-container button" (click) = "ButtonClick()" style="cursor: pointer;">{{btn_text}}</button> -->
+</div>
+
+<div id="11th-12th"  *ngIf = "course_list_value" class="courses-container-1">
+    <div class="box-container"> 
+        <div class="box-1">
+          <img src ="/assets/front-view-young-male-desk-trying-fix-little-construction-purple-wall.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Physics</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+      
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="/assets/sci_math1.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Chemistry</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="/assets/math1.jpg" alt="courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Math</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-1">
+          <img src ="assets/bio-heart.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Biology</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+</div>
+
+<div class="button-container" >
+  <!-- <button class="button-container button" (click)="onButtonClick('button1')">5th to 10th</button> -->
+  <!-- <button class="button-container button" (click)="onButtonClick('button2')">5th to 10th</button> -->
+</div>
+<div id="5th-10th"  *ngIf = "!course_list_value" class="courses-container-2">
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/adorable-young-boy-doing-his-homework.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 5</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/caucasian-boy-studying-home-by-video-conference-homeschooling.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 6</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/medium-shot-kid-wearing-spacesuit.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 7</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+</div>
+<!-- </div>    -->
+<!-- <div class="courses-container-2"> -->
+  <div id="5th-10th"  *ngIf = "!course_list_value" class="courses-container-2">
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/looking-camera-little-schoolboy-sitting-desk-with-school-tools-points-side-isolated-white-background-with-copy-space.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 8</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/student-digital-art-style-education-day.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 9</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply </button>
+          </div>
+          <!-- <button class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box-2">
+          <img src ="/assets/sci_math6.jpg" alt="Courses Image">
+          <div class="coursename-apply" >       
+            <p class="course-name" >Class 10</p>
+            <button class="button-apply-course" [routerLink]="'/applycourse'" > Apply</button>
+          </div>
+          <!-- <button class="button-container-apply-contact" class="button-contact-course" (click)="onButtonClick('button2')">Contact Us</button> -->
+          <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<br>
+
+<!-- <app-whatsapp></app-whatsapp> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<app-footer></app-footer>

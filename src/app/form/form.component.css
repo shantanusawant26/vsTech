@@ -1,0 +1,99 @@
+/* Add your CSS styles here */
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  width: 85%;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.contact-panel {
+  flex: 1; /* Take up remaining space */
+}
+.contact-panel__info {
+  padding: 20px;
+  /* border-radius: 5px; */
+  color: white;
+  background-color: rgb(60, 60, 104);
+  margin-top: 30px;
+  max-width: 400px;
+  margin-left: 55px;
+
+}
+p{
+  margin-left: 20px;
+}
+
+.contact-block {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.contact-block__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-block__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* .mail_href {} */
+  /* Add styles for mail links if needed */
+
+
+
+
+
+.container {
+  
+  max-width: 600px;
+  margin-top: 30px;
+  background-color: white;
+  /* border: 2px solid black; */
+  padding: 20px;
+  }
+  input, textarea{
+   background-color:  rgb(232, 247, 247);
+   border: none;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;  
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button:hover {
+    background-color: #0056b3;
+  } */
+  .error-message {
+    font-size: 13px; /* Reduce the font size */
+    color: red; /* Change the color to red */
+    margin-bottom: 1px;
+  }

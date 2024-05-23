@@ -1,0 +1,18 @@
+button {
+    background-color: green; /* WhatsApp green color */
+    border-radius: 50%; /* Makes the button round */
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Position relative to the viewport */
+    bottom: 20px; /* Adjust distance from bottom */
+    right: 20px; /* Adjust distance from right */
+    z-index: 1000;
+  }
+  
+  button img {
+    width: 100%;
+    height: auto;
+  }
+  

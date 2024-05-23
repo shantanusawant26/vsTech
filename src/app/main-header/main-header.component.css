@@ -1,0 +1,45 @@
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200; /* Adjust the z-index if necessary */
+    top: 0;
+        left: 0;
+     /* Optionally, set a background color */
+    /* Add any other styles you need */
+}
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        height: 60px; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black; 
+        z-index: 500; 
+        padding-top: 0px;
+    }
+
+    .nav-links {
+        margin-left: auto; 
+        display: flex; 
+        align-items: center; 
+        margin-top: 0px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px; 
+    }
+
+    .box-header {
+        border: 2px solid black;
+        padding: 10px;
+        background-color: black;
+        overflow: auto; 
+        margin-top: 28px;
+    }
